@@ -6,6 +6,15 @@ public class Student
     private int studentID;
     private int GPA;
 
+    public Student()
+    {
+        this.name = "";
+        this.department = "";
+        this.age = 0;
+        this.studentID = 0;
+        this.GPA = 0;
+    }
+
     public Student(String name, String department, int studentID, int GPA, int age)
     {
         this.name = name;

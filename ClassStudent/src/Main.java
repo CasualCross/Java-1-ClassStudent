@@ -7,6 +7,7 @@ public class Main
         Student student1 = new Student("Asanov Erlan", "Cybersecurity", 101101, 70, 19);
         Student student2 = new Student("Gambino Chiquita", "Computer Science", 909909, 75, 20);
         Student student3 = new Student("Sabre Lamarr", "Martial Arts", 808808, 80, 21);
+        Student student4 = new Student();
 
         student1.displayInfo();
         System.out.println(" ");
@@ -14,11 +15,13 @@ public class Main
         System.out.println(" ");
         student3.displayInfo();
         System.out.println(" ");
+        student4.displayInfo();
+        System.out.println(" ");
 
         Scanner scanner = new Scanner(System.in);
         while(true)
         {
-            System.out.println("Enter 0 to exit, Enter 1-3 to change info, Enter 4 to display info");
+            System.out.println("Enter 0 to exit, Enter 1-4 to change info, Enter 5 to display info");
             int userInput = scanner.nextInt();
             if (userInput == 0)
             {
@@ -36,13 +39,19 @@ public class Main
             {
                 changeData(student3, scanner);
             }
-            else if(userInput == 4)
+            else if (userInput == 4)
+            {
+                changeData(student4, scanner);
+            }
+            else if(userInput == 5)
             {
                 student1.displayInfo();
                 System.out.println(" ");
                 student2.displayInfo();
                 System.out.println(" ");
                 student3.displayInfo();
+                System.out.println(" ");
+                student4.displayInfo();
                 System.out.println(" ");
             }
             else
